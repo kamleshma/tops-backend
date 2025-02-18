@@ -1,0 +1,1893 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs44\lang9 Module #3 Introduction to OOPS Programming\par
+1. Introduction to C++\par
+LAB EXERCISES:\par
+\fs28 1.1 First C++ Program: Hello World\par
+1.1.1 Write a simple C++ program to display "Hello, World!".\par
+Ans. \par
+#include<iostream>\par
+using namespace std;\par
+int main()\{\par
+\tab cout << "Hello World";\par
+\tab return 0;\par
+\}\par
+1.1.2 Objective: Understand the basic structure of a C++ program, including #include, main(), and cout.\par
+Ans. \par
+1. #include Directive\par
+The #include directive is used to include external libraries or files in your program. It allows you to use functions, classes, and objects that are defined in those files. For example, the #include <iostream> is used to include the Input-Output stream library, which allows you to use cout for output.\par
+2. The main() Function\par
+The main() function is the entry point for any C++ program. When you run the program, the execution starts from this function. The program returns an integer value\par
+3. cout\par
+The cout object is used to display output to the console (screen). It\rquote s part of the C++ Standard Library, and it requires #include <iostream> to work. To display text, you use the insertion operator <<.\par
+\par
+2. Basic Input/Output\par
+1.2.1 Write a C++ program that accepts user input for their name and age and then displays a personalized greeting.\par
+Ans.\par
+#include <iostream>\par
+#include <string>\par
+using namespace std;\par
+\par
+int main() \{\par
+    string name;\par
+    int age;\par
+\par
+    cout << "Enter your name: ";\par
+    cin >> name;\par
+\par
+    cout << "Enter your age: ";\par
+    cin >> age;\par
+    \par
+    cout << "Hello, " << name << "! You are " << age << " years old." << endl;\par
+    return 0;\par
+\}\par
+\par
+1.2.2 Objective: Practice input/output operations using cin and cout.\par
+Ans.\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int num1, num2;\par
+    cout << "Enter the first number: ";\par
+    cin >> num1;\par
+    \par
+    cout << "Enter the second number: ";\par
+    cin >> num2;\par
+    \par
+    int sum = num1 + num2;\par
+    cout << "The sum of " << num1 << " and " << num2 << " is: " << sum << endl;\par
+    \par
+    return 0;\par
+\}\par
+\par
+3. POP vs. OOP Comparison Program\par
+1.3.1 Write two small programs: one using Procedural Programming (POP) to calculate the area of a rectangle, and another using Object-Oriented Programming (OOP) with a class and object for the same task.\par
+Ans.\par
+POP:- \par
+#include <iostream>\par
+using namespace std;\par
+\par
+float calculateArea(float length, float width) \{\par
+    return length * width;\par
+\}\par
+\par
+int main() \{\par
+    float length, width;\par
+    \par
+    cout << "Enter the length of the rectangle: ";\par
+    cin >> length;\par
+    \par
+    cout << "Enter the width of the rectangle: ";\par
+    cin >> width;\par
+    \par
+    float area = calculateArea(length, width);\par
+    cout << "The area of the rectangle is: " << area << endl;\par
+    \par
+    return 0;\par
+\}\par
+\par
+OOP:-\par
+#include <iostream>\par
+using namespace std;\par
+\par
+class Rectangle \{\par
+public:\par
+    float length;\par
+    float width;\par
+    \par
+    float calculateArea() \{\par
+        return length * width;\par
+    \}\par
+\};\par
+\par
+int main() \{\par
+    Rectangle rect;\par
+    \par
+    cout << "Enter the length of the rectangle: ";\par
+    cin >> rect.length;\par
+    \par
+    cout << "Enter the width of the rectangle: ";\par
+    cin >> rect.width;\par
+    \par
+    float area = rect.calculateArea();\par
+    cout << "The area of the rectangle is: " << area << endl;\par
+    \par
+    return 0;\par
+\}\par
+\par
+1.3.2 Objective: Highlight the difference between POP and OOP approaches.\par
+Ans.\par
+POP (Procedure-Oriented Programming):\par
+Focuses on functions or procedures to operate on data.\par
+Organizes code into functions that perform operations on data, with a sequence of steps or instructions to be followed.\par
+The program is viewed as a collection of procedures that take input, process it, and produce output.\par
+\par
+OOP (Object-Oriented Programming):\par
+Focuses on objects (entities that combine data and methods).\par
+Organizes code around objects and classes, where an object is an instance of a class.\par
+It emphasizes the concept of data abstraction, encapsulation, inheritance, and polymorphism.\par
+\par
+\par
+4. Setting Up Development Environment\par
+1.4.1 Write a program that asks for two numbers and displays their sum. Ensure this is done after setting up the IDE (like Dev C++ or CodeBlocks).\par
+Ans.\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int num1, num2;\par
+    cout << "Enter the first number: ";\par
+    cin >> num1;\par
+    \par
+    cout << "Enter the second number: ";\par
+    cin >> num2;\par
+    \par
+    int sum = num1 + num2;\par
+    cout << "The sum of " << num1 << " and " << num2 << " is: " << sum << endl;\par
+    \par
+    return 0;\par
+\}\par
+\par
+IDE install done in lab.\par
+\par
+1.4.2 Objective: Help students understand how to install, configure, and run programs in an IDE.\par
+Ans.\par
+Done in lab.\par
+\par
+\par
+THEORY EXERCISE:\par
+1. What are the key differences between Procedural Programming and Object-Oriented Programming (OOP)?\par
+Ans.\par
+Procedural Programming (PP):\par
+Procedural programming is a paradigm that focuses on procedures or functions to operate on data. In PP, the program is structured around a series of instructions or procedures that execute one after another to perform a task. \par
+Data is typically separate from the functions and is passed between them as needed. The main advantage of procedural programming is its simplicity and ease of implementation for smaller, linear tasks. \par
+However, as the program grows, it can become difficult to manage, as the code lacks modularity, and functions can manipulate global data directly, potentially leading to errors and making maintenance challenging. The focus is primarily on the step-by-step flow of execution.\par
+\par
+Object-Oriented Programming (OOP):\par
+Object-Oriented Programming (OOP) takes a different approach by organizing code around objects, which are instances of classes. \par
+These objects encapsulate both data and the methods that operate on that data, promoting modularity and reusability. OOP allows for the creation of classes that define objects and supports key principles such as inheritance, polymorphism, and encapsulation. \par
+This paradigm is ideal for large, complex software systems where the relationships between entities (represented as objects) can be modeled in a more structured way. OOP encourages easier maintenance and code reuse, as modifications can be made to individual objects without affecting the overall system, making it highly flexible and scalable for managing complex software projects.\par
+\par
+2. List and explain the main advantages of OOP over POP.\par
+Ans.\par
+Encapsulation:\par
+\par
+OOP bundles data and methods into objects, providing better data security and abstraction. It restricts direct access to data and requires interaction through methods, preventing accidental modifications.\par
+Modularity:\par
+Code is organized into independent objects or classes in OOP, which makes it easier to modify, extend, and maintain. In POP, the code is more linear and harder to modify as the program grows.\par
+Code Reusability:\par
+OOP supports inheritance and polymorphism, allowing classes to reuse code and extend functionality easily. POP has limited reuse, requiring the rewriting of code or using global functions.\par
+Maintainability & Scalability:\par
+OOP systems are easier to maintain and scale, as objects are self-contained and can be updated or extended without affecting other parts of the program. POP can become hard to manage as the codebase increases.\par
+Flexibility and Extensibility:\par
+OOP allows new functionality to be added through inheritance and polymorphism without altering existing code. In POP, extending functionality often involves modifying existing procedures, which can lead to issues.\par
+Data Security:\par
+OOP provides better control over data access by encapsulating data within objects and using access modifiers. POP lacks this control, making data more susceptible to unintended modifications.\par
+Error Reduction:\par
+OOP allows for independent testing of objects, making it easier to isolate and fix errors. POP can lead to widespread issues as changes to one part of the code might affect the entire system.\par
+Real-World Modeling:\par
+OOP makes it easier to model real-world entities as objects, aligning the system design with real-life concepts. POP does not inherently focus on modeling real-world systems.\par
+\par
+3. Explain the steps involved in setting up a C++ development environment.\tab\par
+Ans.\par
+install a C++ compiler\par
+for windwos install MinGW\par
+install IDE like VS code\par
+configure the IDE\par
+write a program\par
+run a program\par
+\par
+4. What are the main input/output operations in C++? Provide examples.\par
+Ans.\par
+cout < expression;\par
+this is a output expression.\par
+\par
+cin>>expression\par
+this is input expression\par
+\par
+example: \par
+#include<iostream>\par
+using namespace std;\par
+\par
+int main()\{\par
+\tab int age;\par
+\tab cout << "Enter the age: "<<endl;\par
+\tab cin>>age;\par
+\tab\par
+\tab return 0;\par
+\}\par
+\par
+\par
+\fs44 2. Variables, Data Types, and Operators\par
+LAB EXERCISES:\par
+\fs28 1. Variables and Constants: \par
+2.1.1 Write a C++ program that demonstrates the use of variables and constants. Create variables of different data types and perform operations on them.\par
+Ans. \par
+#include <iostream>\par
+#include <cmath>\par
+\par
+using namespace std;\par
+\par
+int main() \{\par
+    const double PI = 3.14159;\par
+    const int MAX_VALUE = 100;\par
+\par
+    int num1 = 25;\par
+    int num2 = 10;\par
+    double radius = 5.5;\par
+    double area, circumference;\par
+    char grade = 'A';\par
+    bool isStudent = true;\par
+\par
+    int sum = num1 + num2;\par
+    int difference = num1 - num2;\par
+    int product = num1 * num2;\par
+    double quotient = static_cast<double>(num1) / num2;\par
+\par
+    area = PI * pow(radius, 2);\par
+    circumference = 2 * PI * radius;\par
+\par
+    cout << "Sum of " << num1 << " and " << num2 << " is: " << sum << endl;\par
+    cout << "Difference of " << num1 << " and " << num2 << " is: " << difference << endl;\par
+    cout << "Product of " << num1 << " and " << num2 << " is: " << product << endl;\par
+    cout << "Quotient of " << num1 << " divided by " << num2 << " is: " << quotient << endl;\par
+    cout << "Area of the circle with radius " << radius << " is: " << area << endl;\par
+    cout << "Circumference of the circle is: " << circumference << endl;\par
+\par
+    cout << "The grade is: " << grade << endl;\par
+    cout << "Is the person a student? " << (isStudent ? "Yes" : "No") << endl;\par
+\par
+    cout << "The value of PI is: " << PI << endl;\par
+    cout << "The maximum value allowed is: " << MAX_VALUE << endl;\par
+\par
+    return 0;\par
+\}\par
+\par
+2.1.2 Objective: Understand the difference between variables and constants.\par
+Ans.\fs44\par
+\fs28 variable: it is a storage data locations in memory thata can hold a value and the value of a variable can change during program execution.\par
+example: int age;\par
+\par
+constants: it is a similar to variables,  but their value cannot be changed after they  are initliaized. once a constant is given a value.\par
+example: const double PI = 3.14;\par
+\par
+\par
+2. Type Conversion\par
+2.2.1 Write a C++ program that performs both implicit and explicit type conversions and prints the results.\par
+Ans. \par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int a = 10;\par
+    double b = 5.5;\par
+\par
+    double result = a + b;\par
+    cout << "Implicit Conversion: " << a << " + " << b << " = " << result << endl;\par
+\par
+    int c = static_cast<int>(b);\par
+    cout << "Explicit Conversion: " << b << " cast to int is " << c << endl;\par
+\par
+    return 0;\par
+\}\par
+\par
+2.2.2 Objective: Practice type casting in C++.\par
+Ans. \par
+type casting: \par
+there are two type of casting: 1. implcit and 2. explicit\par
+1. implicit : this happens automatically when the compiler converts a smaller data type to a larger one.\par
+2. explicit: this is when you manually convert one data type to another using cast operators like stsic and dynamic.\par
+\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int num1 = 42;\par
+    double num2 = 3.14159;\par
+\par
+    // Implicit casting\par
+    double result1 = num1 + num2;\par
+    cout << "Implicit Casting: " << num1 << " + " << num2 << " = " << result1 << endl;\par
+\par
+    // Explicit casting\par
+    int result2 = static_cast<int>(num2);\par
+    cout << "Explicit Casting: " << num2 << " cast to int is " << result2 << endl;\par
+\par
+    char ch = 'A';\par
+    int asciiValue = static_cast<int>(ch);\par
+    cout << "Explicit Casting: ASCII value of '" << ch << "' is " << asciiValue << endl;\par
+\par
+    return 0;\par
+\}\par
+\par
+3. Operator Demonstration\par
+2.3.1 Write a C++ program that demonstrates arithmetic, relational, logical, and bitwise operators. Perform operations using each type of operator and display the results.\par
+Ans. \par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int num1 = 10, num2 = 5;\par
+    bool result;\par
+\par
+    // Arithmetic operators\par
+    cout << "Arithmetic Operators:" << endl;\par
+    cout << "num1 + num2 = " << num1 + num2 << endl;\par
+    cout << "num1 - num2 = " << num1 - num2 << endl;\par
+    cout << "num1 * num2 = " << num1 * num2 << endl;\par
+    cout << "num1 / num2 = " << num1 / num2 << endl;\par
+    cout << "num1 % num2 = " << num1 % num2 << endl;\par
+\par
+    // Relational operators\par
+    cout << "\\nRelational Operators:" << endl;\par
+    cout << "num1 == num2: " << (num1 == num2) << endl;  \par
+    cout << "num1 != num2: " << (num1 != num2) << endl;  \par
+    cout << "num1 > num2: " << (num1 > num2) << endl;    \par
+    cout << "num1 < num2: " << (num1 < num2) << endl;    \par
+    cout << "num1 >= num2: " << (num1 >= num2) << endl;  \par
+    cout << "num1 <= num2: " << (num1 <= num2) << endl;  \par
+\par
+    // Logical operators\par
+    cout << "\\nLogical Operators:" << endl;\par
+    result = (num1 > num2) && (num1 != num2);  // true AND true\par
+    cout << "(num1 > num2) && (num1 != num2): " << result << endl;\par
+    \par
+    result = (num1 < num2) || (num1 != num2);  // false OR true\par
+    cout << "(num1 < num2) || (num1 != num2): " << result << endl;\par
+    \par
+    result = !(num1 == num2);  // NOT (false)\par
+    cout << "!(num1 == num2): " << result << endl;\par
+\par
+    // Bitwise operators\par
+    cout << "\\nBitwise Operators:" << endl;\par
+    cout << "num1 & num2 = " << (num1 & num2) << endl;  \par
+    cout << "num1 | num2 = " << (num1 | num2) << endl;  \par
+    cout << "num1 ^ num2 = " << (num1 ^ num2) << endl;\par
+    cout << "~num1 = " << (~num1) << endl;            \par
+    cout << "num1 << 1 = " << (num1 << 1) << endl;      \par
+    cout << "num1 >> 1 = " << (num1 >> 1) << endl;      \par
+\par
+    return 0;\par
+\}\par
+\par
+2.3.2 Objective: Reinforce understanding of different types of operators in C++.\par
+Ans.\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    // Arithmetic Operators\par
+    int a = 10, b = 5;\par
+    int sum = a + b;\par
+    int product = a * b;\par
+    \par
+    // Relational Operator\par
+    bool isGreater = (a > b);\par
+\par
+    // Assignment Operator\par
+    a += 3;  // \par
+    \par
+    // Increment Operator\par
+    b++;\par
+\par
+    // Ternary Operator\par
+    int max = (a > b) ? a : b;\par
+\par
+    // Output results\par
+    cout << "Sum: " << sum << ", Product: " << product << endl;\par
+    cout << "Is a greater than b? " << isGreater << endl;\par
+    cout << "a after addition: " << a << endl;\par
+    cout << "b after increment: " << b << endl;\par
+    cout << "Max value: " << max << endl;\par
+\par
+    return 0;\par
+\}\par
+\par
+THEORY EXERCISE:\par
+1. What are the different data types available in C++? Explain with examples.\par
+Ans.\par
+data types: \par
+int, float, double, char, bool, array, pointer, struct, union.\par
+int: used to store interger value like whole numbers\par
+size: 4 bytes\par
+example: int age = 24;\par
+\par
+float: used to store single-precision floating point numbers.\par
+size:4 bytes\par
+precision: 6-7 desimal digits.\par
+example: float a = 3.14;\par
+ \par
+double: used to store doble pricision floating point numbers, which have higher pricision than float.\par
+size = 8 byte \par
+pricision: 15 digits\par
+example: double x = 5.387487648723\par
+\par
+char: used to single character\par
+size: 1 byte\par
+example: char c = 'A';\par
+\par
+Array: a collection of elements of the same type\par
+example:\par
+int num[5] = \{1,2,3,4,5\};\par
+\par
+pointer: a variable that store the memory address of another variable.\par
+ex: int a = 10;\par
+int* p = &a;\par
+\par
+Struct: it is a user define data type that can hold variables of different types.\par
+ex: \par
+struct Person\{\par
+string name;\par
+int age;\par
+\};\par
+\par
+Person person1;\par
+person1.name = "kamlesh";\par
+person1.age = 24;\par
+\par
+union: similar to structure, but all members share the same memory space. only one member can a hold a value at a time.\par
+ex:\par
+union Data\{\par
+\tab int i;\par
+\tab float f;\par
+\tab char c;\par
+\};\par
+Data data;\par
+data.i = 5;\par
+\par
+void: the void data type represents the absence of a type. it's typically used for function that do not return a value.\par
+ex:\par
+void displayMessage() \{\par
+cout << "hello world"<<endl;\par
+\}\par
+\par
+2. Explain the difference between implicit and explicit type conversion in C++.\par
+Ans.\par
+Implicit: Implicit type conversion is performed automatically by the compiler when a smaller data type is converted to a larger data type (or when the conversion does not result in data loss). It is done without the need for explicit casting by the programmer.\par
+example: \par
+int num = 10;            \par
+float pi = 3.14;        \par
+pi = num;               \par
+double result = pi * num;\par
+\par
+explicit: Explicit type conversion is when the programmer manually specifies how a variable of one type should be converted to another type. This is done using casting operators like (type) or using C++ style casting such as static_cast, dynamic_cast, const_cast, or reinterpret_cast.\par
+example:\par
+double pi = 3.14159;      \par
+int num = (int) pi;       \par
+int anotherNum = static_cast<int>(pi);  \par
+double* ptr = reinterpret_cast<double*>(0x1234);  \par
+\par
+3. What are the different types of operators in C++? Provide examples of each.\par
+Ans. there are a different types of operators in C++ like: \par
+1. arithmatic operator\par
+2. relational operator\par
+3. logical operator\par
+4. bitwise operator\par
+5. assignment operator\par
+6. increment and decrement operator\par
+7. conditional operator etc....\par
+\par
+examples:\par
+1. arithmatic operator:\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int a = 10, b = 5;\par
+    \par
+    cout << a + b << endl;\par
+    cout << a - b << endl;\par
+    cout << a * b << endl;\par
+    cout << a / b << endl;\par
+    cout << a % b << endl;\par
+    \par
+    return 0;\par
+\}\par
+\par
+2. relational operator\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int a = 10, b = 5;\par
+    \par
+    cout << (a == b) << endl;\par
+    cout << (a != b) << endl;\par
+    cout << (a > b) << endl;\par
+    cout << (a < b) << endl;\par
+    cout << (a >= b) << endl;\par
+    cout << (a <= b) << endl;\par
+    \par
+    return 0;\par
+\}\par
+\par
+3. Logical Operators\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int a = 10, b = 5;\par
+    \par
+    cout << (a > 0 && b > 0) << endl;\par
+    cout << (a > 0 || b > 10) << endl;\par
+    cout << !(a < 0) << endl;\par
+    \par
+    return 0;\par
+\}\par
+\par
+4. Bitwise Operators\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int a = 5, b = 3;\par
+    \par
+    cout << (a & b) << endl;\par
+    cout << (a | b) << endl;\par
+    cout << (a ^ b) << endl;\par
+    cout << (~a) << endl;\par
+    cout << (a << 1) << endl;\par
+    cout << (a >> 1) << endl;\par
+    \par
+    return 0;\par
+\}\par
+\par
+5. Assignment Operators\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int a = 10;\par
+    \par
+    a += 5;\par
+    cout << a << endl;\par
+    \par
+    a -= 3;\par
+    cout << a << endl;\par
+    \par
+    a *= 2;\par
+    cout << a << endl;\par
+    \par
+    a /= 4;\par
+    cout << a << endl;\par
+    \par
+    a %= 3;\par
+    cout << a << endl;\par
+    \par
+    return 0;\par
+\}\par
+\par
+6. Increment and Decrement Operators\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int a = 5;\par
+    \par
+    cout << a++ << endl;\par
+    cout << a << endl;\par
+    \par
+    cout << --a << endl;\par
+    \par
+    return 0;\par
+\}\par
+\par
+7. Conditional operator\par
+ #include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int a = 5, b = 10;\par
+    \par
+    int value = (a > b) ? a : b;\par
+    cout << value << endl;\par
+    \par
+    return 0;\par
+\}\par
+\par
+\par
+4. Explain the purpose and use of constants and literals in C++.\par
+Ans. A constant is a variable whose value cannot be modified after it is initialized. Constants are used when you need a fixed value throughout the program that should not change.\par
+ex: const PI = 3.14;\par
+it is a code readbility, avoid errors and maintainability.\par
+\par
+Literals: \par
+A literal is a specific, fixed value directly written in the code. It represents a constant value used as part of expressions or assignments. Literals are often seen as raw values like numbers, characters, and strings.\par
+\par
+it is a represent fixed values and make code simple.\par
+\par
+\par
+\fs44 3. Control Flow Statements:\par
+LAB EXERCISES:\par
+\fs28 3.1 Grade Calculator:\par
+3.1.1 Write a C++ program that takes a student\rquote s marks as input and calculates the grade based on if-else conditions.\par
+Ans. \par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    double marks;\par
+\par
+    cout << "Enter marks: ";\par
+    cin >> marks;\par
+\par
+    if (marks >= 90) \{\par
+        cout << "Grade: A" << endl;\par
+    \} else if (marks >= 80) \{\par
+        cout << "Grade: B" << endl;\par
+    \} else if (marks >= 70) \{\par
+        cout << "Grade: C" << endl;\par
+    \} else if (marks >= 60) \{\par
+        cout << "Grade: D" << endl;\par
+    \} else \{\par
+        cout << "Grade: F" << endl;\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+3.1.2 Objective: Practice conditionalstatements(if-else).\par
+Ans. \par
+objective: The program uses a series of if-else statements to check the range in which the entered marks fall and then print the corresponding grade.\par
+The user is prompted to enter the student's marks, and the program evaluates the value using conditional checks to determine the grade.\par
+example:- \par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    double marks;\par
+\par
+    cout << "Enter marks: ";\par
+    cin >> marks;\par
+\par
+    if (marks >= 90) \{\par
+        cout << "Grade: A" << endl;\par
+    \} else if (marks >= 80) \{\par
+        cout << "Grade: B" << endl;\par
+    \} else if (marks >= 70) \{\par
+        cout << "Grade: C" << endl;\par
+    \} else if (marks >= 60) \{\par
+        cout << "Grade: D" << endl;\par
+    \} else \{\par
+        cout << "Grade: F" << endl;\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+3.2 Number Guessing Game\par
+3.2.1 Write a C++ program that asks the user to guess a number between 1 and 100. The program should provide hints if the guess is too high or too low. Use loops to allow the user multiple attempts.\par
+Ans.\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int secretNumber = 42;\par
+    int userGuess;\par
+    int attempts = 0;\par
+\par
+    cout << "Guess the number between 1 and 100!" << endl;\par
+\par
+    while (true) \{\par
+        cout << "Enter your guess: ";\par
+        cin >> userGuess;\par
+        attempts++;\par
+\par
+        if (userGuess > secretNumber) \{\par
+            cout << "Too high! Try again." << endl;\par
+        \} else if (userGuess < secretNumber) \{\par
+            cout << "Too low! Try again." << endl;\par
+        \} else \{\par
+            cout << "Congratulations! You've guessed the number " << secretNumber << " in " << attempts << " attempts." << endl;\par
+            break;\par
+        \}\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+3.2.2 Objective: Understand while loops and conditional logic.\par
+Ans. \par
+While Loops: The program uses a while (true) loop to continuously ask the user for a guess until the correct number is guessed.\par
+Conditional Logic: Inside the loop, if-else conditions are used to check if the guessed number is too high, too low, or correct.\par
+\par
+example: \par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int secretNumber = 42;\par
+    int userGuess;\par
+    int attempts = 0;\par
+\par
+    cout << "Guess the number between 1 and 100!" << endl;\par
+\par
+    while (true) \{\par
+        cout << "Enter your guess: ";\par
+        cin >> userGuess;\par
+        attempts++;\par
+\par
+        if (userGuess > secretNumber) \{\par
+            cout << "Too high! Try again." << endl;\par
+        \} else if (userGuess < secretNumber) \{\par
+            cout << "Too low! Try again." << endl;\par
+        \} else \{\par
+            cout << "Congratulations! You've guessed the number " << secretNumber << " in " << attempts << " attempts." << endl;\par
+            break;\par
+        \}\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+3.3 Multiplication Table\par
+3.3.1 Write a C++ program to display the multiplication table of a given number using a for loop.\par
+Ans. \par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int number;\par
+\par
+    cout << "Enter a number to display its multiplication table: ";\par
+    cin >> number;\par
+\par
+    for (int i = 1; i <= 10; ++i) \{\par
+        cout << number << " x " << i << " = " << number * i << endl;\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+3.3.2 Objective: Practice using loops.\par
+Ans. \par
+Loops: The program uses a for loop to iterate from 1 to 10, performing the multiplication for each iteration.\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int number;\par
+\par
+    cout << "Enter a number to display its multiplication table: ";\par
+    cin >> number;\par
+\par
+    for (int i = 1; i <= 10; ++i) \{\par
+        cout << number << " x " << i << " = " << number * i << endl;\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+3.4 Nested Control Structures\par
+3.4.1 Write a program that prints a right-angled triangle using stars (*) with a nested loop.\par
+Ans. \par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int height;\par
+\par
+    cout << "Enter the height of the triangle: ";\par
+    cin >> height;\par
+\par
+    for (int i = 1; i <= height; ++i) \{\par
+        for (int j = 1; j <= i; ++j) \{\par
+            cout << "*";\par
+        \}\par
+        cout << endl;\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+3.4.2 Objective: Learn nested control structures.\par
+Ans. \par
+Nested Control Structures: This program uses a nested for loop to print the pattern. The outer loop controls the number of rows, while the inner loop controls the number of stars printed in each row.\par
+example:\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int height;\par
+\par
+    cout << "Enter the height of the triangle: ";\par
+    cin >> height;\par
+\par
+    for (int i = 1; i <= height; ++i) \{\par
+        for (int j = 1; j <= i; ++j) \{\par
+            cout << "*";\par
+        \}\par
+        cout << endl;\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+\par
+\fs44 THEORY EXERCISE:\par
+\fs28 1. What are conditional statements in C++? Explain the if-else and switch statements.\par
+Ans.\par
+1. if-else Statement\par
+The if-else statement is used to execute a block of code if a specified condition is true, and another block of code if the condition is false.\par
+syntax: \par
+if (condition) \{\par
+    // Code to execute if the condition is true\par
+\} else \{\par
+    // Code to execute if the condition is false\par
+\}\par
+\par
+2. if-else if-else Statement\par
+When there are multiple conditions to check, we can chain multiple if, else if, and else blocks.\par
+syntax.\par
+if (condition1) \{\par
+    // Code to execute if condition1 is true\par
+\} else if (condition2) \{\par
+    // Code to execute if condition2 is true\par
+\} else \{\par
+    // Code to execute if all conditions are false\par
+\}\par
+\par
+3. switch Statement\par
+The switch statement is used to evaluate a single variable or expression and execute different blocks of code based on the value of that variable. It's often used when you have multiple possible conditions to check that are based on the same variable.\par
+syntax:\par
+switch (expression) \{\par
+    case value1:\par
+        // Code to execute if expression == value1\par
+        break;\par
+    case value2:\par
+        // Code to execute if expression == value2\par
+        break;\par
+    default:\par
+        // Code to execute if expression doesn't match any case\par
+\}\par
+\par
+explain example by this two statement:\par
+if-else :\par
+if (day == 1) \{ cout << "Monday"; \}\par
+else if (day == 2) \{ cout << "Tuesday"; \}\par
+else if (day == 3) \{ cout << "Wednesday"; \}\par
+\par
+switch:\par
+switch(day) \{\par
+    case 1: cout << "Monday"; break;\par
+    case 2: cout << "Tuesday"; break;\par
+\}\par
+\par
+2. What is the difference between for, while, and do-while loops in C++?\par
+Ans.\par
+1. for Loop\par
+The for loop is generally used when the number of iterations is known beforehand, or it is based on a counter variable that increments or decrements in a predictable manner. The loop header contains all the loop control elements (initialization, condition, and increment/decrement) in a single line.\par
+syntax: \par
+for (initialization; condition; increment/decrement) \{\par
+    // Code to execute\par
+\}\par
+example: \par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    for (int i = 1; i <= 5; ++i) \{\par
+        cout << i << " ";\par
+    \}\par
+    return 0;\par
+\}\par
+\par
+2. while Loop\par
+The while loop is typically used when the number of iterations is not known in advance and depends on a condition being true. The condition is checked before each iteration, and the loop will run as long as the condition evaluates to true.\par
+syntax:\par
+while (condition) \{\par
+    // Code to execute\par
+\}\par
+example:\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int i = 1;\par
+    while (i <= 5) \{\par
+        cout << i << " ";\par
+        ++i;\par
+    \}\par
+    return 0;\par
+\}\par
+\par
+3. do-while Loop\par
+The do-while loop is similar to the while loop, but it guarantees that the loop body will be executed at least once, even if the condition is false. This is because the condition is checked after the loop body is executed.\par
+syntax:\par
+do \{\par
+    // Code to execute\par
+\} while (condition);\par
+\par
+example:\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int i = 1;\par
+    do \{\par
+        cout << i << " ";\par
+        ++i;\par
+    \} while (i <= 5);\par
+    return 0;\par
+\}\par
+\par
+3. How are break and continue statements used in loops? Provide examples.\par
+Ans.\par
+1. break Statement\par
+The break statement is used to immediately exit the loop, regardless of the loop\rquote s condition. It is commonly used when a specific condition is met, and further iterations are no longer needed.\par
+\par
+-> In a for loop, the break statement will terminate the loop and move the control to the statement after the loop.\par
+-> In a while loop or do-while loop, the break statement will immediately exit the loop.\par
+\par
+example: \par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    for (int i = 1; i <= 10; ++i) \{\par
+        if (i == 6) \{\par
+            cout << "Breaking the loop at i = " << i << endl;\par
+            break;  \par
+        \}\par
+        cout << i << " ";\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+2. continue Statement\par
+The continue statement is used to skip the current iteration of the loop and move to the next iteration. The remaining code after continue inside the loop is not executed for that particular iteration.\par
+\par
+-> In a for loop, the continue statement skips the remaining part of the loop body for the current iteration and proceeds with the next iteration.\par
+-> In a while or do-while loop, the continue statement will cause the condition to be re-evaluated and control proceeds to the next iteration.\par
+\par
+example: \par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    for (int i = 1; i <= 10; ++i) \{\par
+        if (i == 5) \{\par
+            continue;  \par
+        \}\par
+        cout << i << " ";\par
+    \}\par
+\par
+    return 0;\par
+\}\fs44\par
+\par
+\fs28 4. Explain nested control structures with an example.\par
+Ans.\par
+Nested control structures refer to the practice of placing one control structure (like a loop or conditional statement) inside another. This allows for more complex decision-making and iteration patterns, such as checking multiple conditions or executing loops within loops.\par
+example:\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int n = 5;\par
+\par
+    for (int i = 1; i <= n; ++i) \{  \par
+        for (int j = 1; j <= i; ++j) \{  \par
+            cout << "*";\par
+        \}\par
+        cout << endl;  \par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+\fs44 4. Functions and Scope\par
+LAB EXERCISES:\par
+\fs28 4.1 Simple Calculator Using Functions\par
+4.1.1 Write a C++ program that defines functions for basic arithmetic operations (add, subtract, multiply, divide). The main function should call these based on user input.\par
+Ans.\par
+#include <iostream>\par
+using namespace std;\par
+\par
+double add(double a, double b) \{\par
+    return a + b;\par
+\}\par
+\par
+double subtract(double a, double b) \{\par
+    return a - b;\par
+\}\par
+\par
+double multiply(double a, double b) \{\par
+    return a * b;\par
+\}\par
+\par
+double divide(double a, double b) \{\par
+    if (b != 0) \{\par
+        return a / b;\par
+    \} else \{\par
+        cout << "Error! Division by zero is not allowed." << endl;\par
+        return 0;\par
+    \}\par
+\}\par
+\par
+int main() \{\par
+    double num1, num2;\par
+    int choice;\par
+\par
+    cout << "Enter first number: ";\par
+    cin >> num1;\par
+\par
+    cout << "Enter second number: ";\par
+    cin >> num2;\par
+\par
+    cout << "Select an operation:" << endl;\par
+    cout << "1. Add" << endl;\par
+    cout << "2. Subtract" << endl;\par
+    cout << "3. Multiply" << endl;\par
+    cout << "4. Divide" << endl;\par
+    cout << "Enter choice (1/2/3/4): ";\par
+    cin >> choice;\par
+\par
+    switch (choice) \{\par
+        case 1:\par
+            cout << "Result: " << add(num1, num2) << endl;\par
+            break;\par
+        case 2:\par
+            cout << "Result: " << subtract(num1, num2) << endl;\par
+            break;\par
+        case 3:\par
+            cout << "Result: " << multiply(num1, num2) << endl;\par
+            break;\par
+        case 4:\par
+            cout << "Result: " << divide(num1, num2) << endl;\par
+            break;\par
+        default:\par
+            cout << "Invalid choice!" << endl;\par
+            break;\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+4.1.2 Objective: Practice defining and using functions in C++.\par
+Ans.\par
+ it's essential to understand how to structure functions properly, pass parameters, and return values. Functions allow you to break down complex tasks into smaller, manageable pieces of code.\par
+1. Function Definition: A function is defined by specifying the return type, name, and parameters, followed by a body enclosed in curly braces \{\}.\par
+2. Function Call: Once defined, you can call a function from the main program (or other functions), passing any necessary arguments.\par
+3. Return Type: Functions may return a value (e.g., int, double, etc.), or they may be void if they don't return anything.\par
+\par
+4.2 Factorial Calculation Using Recursion\par
+4.2.1 Write a C++ program that calculates the factorial of a number using recursion.\par
+Ans.\par
+#include <iostream>\par
+using namespace std;\par
+\par
+long long factorial(int n) \{\par
+    if (n == 0 || n == 1) \{\par
+        return 1;\par
+    \}\par
+    return n * factorial(n - 1);\par
+\}\par
+\par
+int main() \{\par
+    int number;\par
+\par
+    cout << "Enter a number: ";\par
+    cin >> number;\par
+\par
+    if (number < 0) \{\par
+        cout << "Factorial is not defined for negative numbers." << endl;\par
+    \} else \{\par
+        cout << "The factorial of " << number << " is " << factorial(number) << endl;\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+4.2.2 Objective: Understand recursion in functions.\par
+Ans.\par
+Recursion is a programming technique where a function calls itself to solve a smaller instance of the same problem. It is especially useful for problems that can be broken down into smaller, similar sub-problems. Understanding recursion is key for problems like calculating factorials, traversing data structures (e.g., trees, graphs), and many algorithms.\par
+Base Case: The condition that stops the recursion. Without it, the function would call itself indefinitely, leading to a stack overflow error.\par
+Recursive Case: The part of the function where it calls itself, usually with a smaller or simpler argument.\par
+\par
+\par
+3. Variable Scope\par
+4.3.1 Write a program that demonstrates the difference between local and global variables in C++. Use functions to show scope.\par
+Ans.\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int globalVar = 10;\par
+\par
+void displayLocalVar() \{\par
+    int localVar = 20;\par
+    cout << "Inside displayLocalVar() function: " << endl;\par
+    cout << "Local variable: " << localVar << endl;\par
+    cout << "Global variable: " << globalVar << endl;\par
+\}\par
+\par
+void modifyGlobalVar() \{\par
+    globalVar = 30;\par
+    cout << "Inside modifyGlobalVar() function: " << endl;\par
+    cout << "Global variable modified: " << globalVar << endl;\par
+\}\par
+\par
+int main() \{\par
+    int mainVar = 40;\par
+\par
+    cout << "Inside main() function: " << endl;\par
+    cout << "Local variable in main: " << mainVar << endl;\par
+    cout << "Global variable: " << globalVar << endl;\par
+    \par
+    displayLocalVar();\par
+    modifyGlobalVar();\par
+    \par
+    cout << "\\nAfter modifying the global variable in main() function: " << endl;\par
+    cout << "Global variable: " << globalVar << endl;\par
+\par
+    return 0;\par
+\}\par
+\par
+\par
+4.3.2 Objective: Reinforce the concept of variable scope.\par
+Ans.\par
+The objective of this program is to reinforce the concept of variable scope in C++. It demonstrates how local and global variables behave differently within the scope of functions and the main program. By understanding the differences between local variables (which are confined to the function or block in which they are declared) and global variables (which are accessible throughout the entire program), you can manage data and control the flow of information in your programs more effectively.\par
+\par
+\par
+THEORY EXERCISE:\par
+1. What is a function in C++? Explain the concept of function declaration, definition, and calling.\par
+Ans.\par
+function is a block of code that performs a specific task. Functions help in breaking down complex problems into smaller, more manageable subproblems. They allow for code reusability, modularity, and organization.\par
+1. Function declaration:\par
+A function declaration (also known as a function prototype) is the declaration of the function's signature without its body. It tells the compiler the function's name, return type, and the types of parameters it accepts. It is usually placed before the main() function or other functions that will call it.\par
+return_type function_name(parameter_list);\par
+\par
+2. Function defination:\par
+A function definition provides the complete implementation of the function. It includes the function's name, return type, parameters, and the block of code that will be executed when the function is called.\par
+return_type function_name(parameter_list) \{\par
+    // Function body\par
+\}\par
+\par
+3. Unction calling:\par
+Function calling is when a function is invoked to execute its defined task. To call a function, you specify its name and pass any required arguments\par
+function_name(arguments);\par
+\par
+2. What is the scope of variables in C++? Differentiate between local and global scope.\par
+Ans.\par
+scope of a variable refers to the region of the program where the variable is accessible or visible. The scope of a variable determines where it can be used, and it is important for understanding how variables are stored and referenced during program execution.\par
+there are two types:\par
+1. local scope:\par
+Local Scope: A variable has local scope if it is declared inside a function or a block (e.g., within loops, conditionals). It is only accessible within that specific function or block and is not visible outside of it. Once the function or block execution is finished, the variable is destroyed.\par
+example:\par
+#include <iostream>\par
+using namespace std;\par
+\par
+void demoLocalScope() \{\par
+    int localVar = 10;  \par
+    cout << "Local variable inside function: " << localVar << endl;\par
+\}\par
+\par
+int main() \{\par
+    demoLocalScope();\par
+        return 0;\par
+\}\par
+\par
+2. global scope:\par
+ A variable has global scope if it is declared outside of all functions (usually at the top of the program). It is accessible from anywhere in the program, including inside functions, provided it is declared before any function that uses it.\par
+example:\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int globalVar = 20;  \par
+void demoGlobalScope() \{\par
+    cout << "Global variable inside function: " << globalVar << endl;\par
+\}\par
+\par
+int main() \{\par
+    cout << "Global variable inside main: " << globalVar << endl;\par
+    demoGlobalScope();\par
+    return 0;\par
+\}\par
+\par
+3. Explain recursion in C++ with an example.\par
+Ans.\par
+Recursion is a programming technique where a function calls itself in order to solve a problem. The function typically solves a smaller instance of the problem, and the process continues until a base case is reached. Once the base case is met, the recursion starts to "unwind," returning results back to the previous calls.\par
+example:\par
+#include <iostream>\par
+using namespace std;\par
+\par
+long long factorial(int n) \{\par
+    if (n == 0 || n == 1) \{\par
+        return 1;  \par
+    \}\par
+    return n * factorial(n - 1); \par
+ \}\par
+\par
+int main() \{\par
+    int number;\par
+    \par
+    cout << "Enter a number: ";\par
+    cin >> number;\par
+    \par
+    if (number < 0) \{\par
+        cout << "Factorial is not defined for negative numbers." << endl;\par
+    \} else \{\par
+        cout << "The factorial of " << number << " is " << factorial(number) << endl;\par
+    \}\par
+    \par
+    return 0;\par
+\}\par
+\par
+4. What are function prototypes in C++? Why are they used?\par
+Ans.\par
+A function prototype in C++ is a declaration of a function that specifies the function's name, its return type, and the types of its parameters, but does not include the function's body. It is essentially a forward declaration of a function that tells the compiler what the function will look like (its signature) before it is actually defined or called.\par
+return_type function_name(parameter_type1, parameter_type2, ...);\par
+Function prototypes in C++ are used to inform the compiler about the function's signature (name, return type, and parameter types) before the function is actually defined. \par
+This is particularly useful when a function is called before its definition in the code, allowing for better organization and modularity. Prototypes enable the compiler to check the correctness of function calls, ensuring the correct number and types of arguments are passed to the function, which helps prevent runtime errors. \par
+They also allow for functions to be defined in separate files, with prototypes typically placed in header files and definitions in source files, improving code structure and readability. Additionally, function prototypes are essential for function overloading, as they help the compiler differentiate between functions with the same name but different parameters. Overall, they are crucial for ensuring type safety and proper function usage across a program.\par
+\par
+\par
+\fs44 5. Arrays and Strings\par
+LAB EXERCISES:\par
+\fs28 5.1 Array Sum and Average\par
+5.1.1 Write a C++ program that accepts an array of integers, calculates the sum and average, and displays the results.\par
+Ans. \par
+#include <iostream>\par
+#include <vector>\par
+\par
+using namespace std;\par
+\par
+int main() \{\par
+    int n;\par
+    cout << "Enter the number of integers: ";\par
+    cin >> n;\par
+\par
+    vector<int> arr(n);\par
+    cout << "Enter " << n << " integers: ";\par
+    for (int i = 0; i < n; i++) \{\par
+        cin >> arr[i];\par
+    \}\par
+\par
+    int sum = 0;\par
+    for (int i = 0; i < n; i++) \{\par
+        sum += arr[i];\par
+    \}\par
+\par
+    double average = static_cast<double>(sum) / n;\par
+\par
+    cout << "Sum: " << sum << endl;\par
+    cout << "Average: " << average << endl;\par
+\par
+    return 0;\par
+\}\par
+\par
+5.1.2 Objective: Understand basic array manipulation.\par
+Ans. Arrays are collections of data, typically of the same type, that are stored in a contiguous block of memory. \par
+Array manipulation involves basic operations such as creating arrays, accessing and modifying elements using indices, and performing actions like adding, removing, or updating elements. You can append new elements, insert at specific positions, or delete elements by index or value. Arrays can also be sliced to obtain sub-arrays, and you can search for elements using functions like in or index(). Iterating through arrays is common with loops, and sorting allows you to arrange elements in ascending or descending order. Understanding these operations is essential for efficiently handling data in arrays across many programming tasks.\par
+\par
+5.2 Matrix Addition\par
+5.2.1 Write a C++ program to perform matrix addition on two 2x2 matrices.\par
+Ans.\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    // Declare two 2x2 matrices\par
+    int matrix1[2][2], matrix2[2][2], result[2][2];\par
+\par
+    // Input elements for matrix1\par
+    cout << "Enter elements for matrix 1 (2x2):\\n";\par
+    for (int i = 0; i < 2; i++) \{\par
+        for (int j = 0; j < 2; j++) \{\par
+            cout << "Enter element at position [" << i+1 << "][" << j+1 << "]: ";\par
+            cin >> matrix1[i][j];\par
+        \}\par
+    \}\par
+\par
+    // Input elements for matrix2\par
+    cout << "\\nEnter elements for matrix 2 (2x2):\\n";\par
+    for (int i = 0; i < 2; i++) \{\par
+        for (int j = 0; j < 2; j++) \{\par
+            cout << "Enter element at position [" << i+1 << "][" << j+1 << "]: ";\par
+            cin >> matrix2[i][j];\par
+        \}\par
+    \}\par
+\par
+    // Perform matrix addition\par
+    for (int i = 0; i < 2; i++) \{\par
+        for (int j = 0; j < 2; j++) \{\par
+            result[i][j] = matrix1[i][j] + matrix2[i][j];\par
+        \}\par
+    \}\par
+\par
+    // Display the result\par
+    cout << "\\nSum of the two matrices is:\\n";\par
+    for (int i = 0; i < 2; i++) \{\par
+        for (int j = 0; j < 2; j++) \{\par
+            cout << result[i][j] << " ";\par
+        \}\par
+        cout << endl;\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+5.2.2 Objective: Practice multi-dimensional arrays.\par
+Ans. \par
+multi-dimensional arrays is a natural extension of basic arrays and is especially useful for representing matrices, tables, or grids in programming. A multi-dimensional array is an array that contains other arrays as its elements, creating a grid-like structure.\par
+Multi-dimensional arrays are a powerful way to represent data in a grid-like structure, with each dimension offering a way to organize data in rows, columns, and even deeper structures. In a two-dimensional array, for example, you can represent a matrix with rows and columns, and elements are accessed using two indices (e.g., arr[row][column]). By using nested loops, you can iterate through and manipulate the elements efficiently. Beyond 2D arrays, you can create 3D arrays and higher-dimensional arrays, which expand the concept into multiple layers or grids. These arrays are commonly used in applications such as matrix operations, game development, and simulations, where data is naturally structured in multiple dimensions.\par
+\par
+5.3 String Palindrome Check\par
+5.3.1 Write a C++ program to check if a given string is a palindrome (reads the same forwards and backwards).\par
+Ans.\par
+#include <iostream>\par
+#include <string>\par
+#include <algorithm>\par
+using namespace std;\par
+\par
+bool isPalindrome(string str) \{\par
+    transform(str.begin(), str.end(), str.begin(), ::tolower);\par
+    str.erase(remove(str.begin(), str.end(), ' '), str.end());\par
+\par
+    int n = str.length();\par
+    for (int i = 0; i < n / 2; i++) \{\par
+        if (str[i] != str[n - i - 1]) \{\par
+            return false;\par
+        \}\par
+    \}\par
+    return true;\par
+\}\par
+\par
+int main() \{\par
+    string str;\par
+    cout << "Enter a string: ";\par
+    getline(cin, str);\par
+\par
+    if (isPalindrome(str)) \{\par
+        cout << "The string is a palindrome." << endl;\par
+    \} else \{\par
+        cout << "The string is not a palindrome." << endl;\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+5.3.2 Objective: Practice string operations.\par
+Ans.\par
+String operations in C++ allow you to manipulate and process text efficiently. You can initialize strings, access individual characters via indices, and calculate the string length using length() or size(). \par
+Concatenating strings can be done using the + operator or append(), while the substr() function allows you to extract parts of a string. Searching for substrings is easy with find(), and string comparisons can be made using == or the compare() function. Additionally, you can modify strings by replacing parts with replace(), removing characters with erase(), or inserting new ones with insert(). For case manipulation, transform() can convert the string to uppercase or lowercase. \par
+String trimming, although not built-in, can be done by erasing leading and trailing spaces manually. Practicing these string operations is essential for handling text in programming tasks, such as parsing input, formatting output, or processing user data.\par
+\par
+\fs44 THEORY EXERCISE:\par
+\fs28 1. What are arrays in C++? Explain the difference between single-dimensional and multi-dimensional arrays.\par
+Ans.\par
+array is a data structure that can store multiple values of the same type, grouped under a single variable name. Each element in an array is accessed using an index, and arrays allow you to store large amounts of data efficiently, especially when the number of elements is known in advance. Arrays are a fixed-size data structure, meaning the size of the array must be determined at the time of its creation.\par
+\par
+Single-Dimensional Arrays:\par
+A single-dimensional array (or 1D array) is a simple list of elements, where each element can be accessed by a single index. It\rquote s essentially a linear collection of data, where each element is identified by its position or index in the array.\par
+ex: int arr[5] = \{1, 2, 3, 4, 5\};\par
+\par
+Multi-Dimensional Arrays:\par
+A multi-dimensional array is an array of arrays. It can have two or more dimensions. The most common type of multi-dimensional array is a two-dimensional array (2D array), which can be thought of as a matrix or a table with rows and columns. Higher-dimensional arrays (3D, 4D, etc.) are used in more complex data structures like grids or matrices.\par
+ex:\par
+int arr[3][3] = \{\par
+    \{1, 2, 3\},\par
+    \{4, 5, 6\},\par
+    \{7, 8, 9\}\par
+\};\par
+\par
+2. Explain string handling in C++ with examples.\par
+Ans.\par
+strings are sequences of characters used to store and manipulate text data. C++ provides two main types of strings:\par
+\par
+1. C-style strings (character arrays)\par
+2. C++ Standard Library std::string\par
+\par
+1. C-style Strings:\par
+A C-style string is an array of characters terminated by a null character ('\\0'). These strings are basic and don't offer as much flexibility as the std::string class, but they are still widely used, especially in older C/C++ code.\par
+example:\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    char str[] = "Hello, C++!";  \par
+    cout << str << endl;  \par
+    return 0;\par
+\}\par
+\par
+2. C++ std::string Class:\par
+The std::string class from the C++ Standard Library is a more modern and flexible way of handling strings. It provides various functions to manipulate strings, such as concatenation, comparison, and modification, without the need to manually manage memory.\par
+example:\par
+#include <iostream>\par
+#include <string>  \par
+using namespace std;\par
+\par
+int main() \{\par
+    string str = "Hello, C++!";\par
+    cout << str << endl;  \par
+    return 0;\par
+\}\par
+\par
+3. How are arrays initialized in C++? Provide examples of both 1D and 2D arrays.\par
+Ans.\par
+arrays are initialized in various ways, depending on the size and type of the array. The process of initialization involves assigning values to the elements of an array when it is declared. Both 1D arrays and 2D arrays can be initialized with fixed values or dynamically during runtime.\par
+1D Arrays:\par
+A 1D array is essentially a list of elements, all of the same type, stored in a single row. The elements of the array are indexed from 0 to n-1 (where n is the size of the array).\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int arr[5] = \{1, 2, 3, 4, 5\};  // Initialization of a 1D array\par
+    for (int i = 0; i < 5; i++) \{\par
+        cout << arr[i] << " ";  // Output: 1 2 3 4 5\par
+    \}\par
+    return 0;\par
+\}\par
+\par
+2D Arrays:\par
+A 2D array is an array of arrays, which can be visualized as a matrix with rows and columns. You need to specify the number of rows and columns when declaring a 2D array.\par
+#include <iostream>\par
+using namespace std;\par
+\par
+int main() \{\par
+    int arr[3][3] = \{\par
+        \{1, 2, 3\},\par
+        \{4, 5, 6\},\par
+        \{7, 8, 9\}\par
+    \};\par
+    for (int i = 0; i < 3; i++) \{\par
+        for (int j = 0; j < 3; j++) \{\par
+            cout << arr[i][j] << " ";  // Output: 1 2 3 4 5 6 7 8 9\par
+        \}\par
+        cout << endl;\par
+    \}\par
+    return 0;\par
+\}\par
+\par
+4. Explain string operations and functions in C++.\par
+Ans.\par
+strings can be handled in two main ways: through C-style strings (character arrays) and through the C++ Standard Library std::string class. The latter is more flexible and commonly used in modern C++ programming due to its built-in functions that simplify string manipulation.\par
+string str1 = "Hello";\par
+string str2 = " World";\par
+string result = str1 + str2;  \par
+cout << result << endl;  \par
+\par
+String Functions in C++:\par
+Length of a String:\par
+To find the length of a string (the number of characters), use the length() or size() method:\par
+string str = "Hello, C++!";\par
+cout << str.length() << endl;  \par
+\par
+\par
+\fs44 6. Introduction to Object-Oriented Programming\par
+LAB EXERCISES:\par
+\fs28 6.1 Class for a Simple Calculator\par
+6.1.1 Write a C++ program that defines a class Calculator with functions for addition, subtraction, multiplication, and division. Create objects to use these functions.\par
+Ans.\par
+#include <iostream>\par
+using namespace std;\par
+\par
+class Calculator \{\par
+public:\par
+    double add(double a, double b) \{\par
+        return a + b;\par
+    \}\par
+\par
+    double subtract(double a, double b) \{\par
+        return a - b;\par
+    \}\par
+\par
+    double multiply(double a, double b) \{\par
+        return a * b;\par
+    \}\par
+\par
+    double divide(double a, double b) \{\par
+        if (b != 0) \{\par
+            return a / b;\par
+        \} else \{\par
+            cout << "Error: Division by zero is not allowed!" << endl;\par
+            return 0;\par
+        \}\par
+    \}\par
+\};\par
+\par
+int main() \{\par
+    Calculator calc;\par
+    double num1, num2;\par
+\par
+    cout << "Enter first number: ";\par
+    cin >> num1;\par
+\par
+    cout << "Enter second number: ";\par
+    cin >> num2;\par
+\par
+    cout << "Addition: " << calc.add(num1, num2) << endl;\par
+    cout << "Subtraction: " << calc.subtract(num1, num2) << endl;\par
+    cout << "Multiplication: " << calc.multiply(num1, num2) << endl;\par
+    cout << "Division: " << calc.divide(num1, num2) << endl;\par
+\par
+    return 0;\par
+\}\par
+\par
+6.1.2 Objective: Introduce basic class structure.\par
+Ans.\par
+#include <iostream>\par
+using namespace std;\par
+\par
+class Person \{\par
+public:\par
+    string name;\par
+    int age;\par
+\par
+    Person(string n, int a) \{\par
+        name = n;\par
+        age = a;\par
+    \}\par
+\par
+    void introduce() \{\par
+        cout << "Hello, my name is " << name << "!" << endl;\par
+    \}\par
+\par
+    int getAge() \{\par
+        return age;\par
+    \}\par
+\};\par
+\par
+int main() \{\par
+    Person person1("Kamlesh", 24);\par
+\par
+    cout << "My name is " << person1.name << "." << endl;\par
+    cout << "I am " << person1.getAge() << " years old." << endl;\par
+    person1.introduce();\par
+\par
+    return 0;\par
+\}\par
+\par
+6.2 Class for Bank Account\par
+6.2.1 Create a class BankAccount with data members like balance and member functions like deposit and withdraw. Implement encapsulation by keeping the data members private.\par
+Ans.\par
+#include <iostream>\par
+using namespace std;\par
+\par
+class BankAccount \{\par
+private:\par
+    double balance;\par
+\par
+public:\par
+    BankAccount(double initialBalance) \{\par
+        if (initialBalance >= 0)\par
+            balance = initialBalance;\par
+        else\par
+            balance = 0;\par
+    \}\par
+\par
+    void deposit(double amount) \{\par
+        if (amount > 0)\par
+            balance += amount;\par
+        else\par
+            cout << "Deposit amount must be positive!" << endl;\par
+    \}\par
+\par
+    void withdraw(double amount) \{\par
+        if (amount > 0 && amount <= balance)\par
+            balance -= amount;\par
+        else if (amount > balance)\par
+            cout << "Insufficient funds!" << endl;\par
+        else\par
+            cout << "Withdrawal amount must be positive!" << endl;\par
+    \}\par
+\par
+    double getBalance() const \{\par
+        return balance;\par
+    \}\par
+\};\par
+\par
+int main() \{\par
+    BankAccount account1(500);\par
+\par
+    cout << "Initial balance: Rs. " << account1.getBalance() << endl;\par
+\par
+    account1.deposit(200);\par
+    cout << "Balance after deposit: Rs. " << account1.getBalance() << endl;\par
+\par
+    account1.withdraw(100);\par
+    cout << "Balance after withdrawal: Rs. " << account1.getBalance() << endl;\par
+\par
+    account1.withdraw(700); \par
+    cout << "Balance after failed withdrawal: Rs. " << account1.getBalance() << endl;\par
+\par
+    return 0;\par
+\}\par
+\par
+6.2.2 Objective: Understand encapsulation in classes.\par
+Ans.\par
+Encapsulation is one of the four fundamental principles of Object-Oriented Programming (OOP), along with inheritance, polymorphism, and abstraction. It refers to the concept of bundling the data (attributes) and the methods (functions) that operate on the data into a single unit, or class. In encapsulation, data members (variables) are kept private and can only be accessed or modified through public methods (getters and setters). This ensures that the internal representation of the object is hidden from the outside world, preventing unintended interference and misuse of the data.\par
+1. Data Hiding\par
+2. Access Through public method\par
+3 Protecting object integrity\par
+\par
+\par
+6.3 Inheritance Example\par
+6.3.1 Write a program that implements inheritance using a base class Person and derived classes Student and Teacher. Demonstrate reusability through inheritance.\par
+Ans.\par
+#include <iostream>\par
+#include <string>\par
+using namespace std;\par
+\par
+class Person \{\par
+protected:\par
+    string name;\par
+    int age;\par
+\par
+public:\par
+    Person(string n, int a) : name(n), age(a) \{\}\par
+\par
+    virtual void introduce() \{\par
+        cout << "Hello, my name is " << name << " and I am " << age << " years old." << endl;\par
+    \}\par
+\};\par
+\par
+class Student : public Person \{\par
+private:\par
+    string student_id;\par
+\par
+public:\par
+    Student(string n, int a, string id) : Person(n, a), student_id(id) \{\}\par
+\par
+    void introduce() override \{\par
+        Person::introduce();\par
+        cout << "I am a student, and my student ID is " << student_id << "." << endl;\par
+    \}\par
+\par
+    void study() \{\par
+        cout << name << " is studying." << endl;\par
+    \}\par
+\};\par
+\par
+class Teacher : public Person \{\par
+private:\par
+    string subject;\par
+\par
+public:\par
+    Teacher(string n, int a, string sub) : Person(n, a), subject(sub) \{\}\par
+\par
+    void introduce() override \{\par
+        Person::introduce();\par
+        cout << "I am a teacher, and I teach " << subject << "." << endl;\par
+    \}\par
+\par
+    void teach() \{\par
+        cout << name << " is teaching " << subject << "." << endl;\par
+    \}\par
+\};\par
+\par
+int main() \{\par
+    Student student1("Kamlesh", 20, "S12345");\par
+    Teacher teacher1("Kishan", 40, "Mathematics");\par
+\par
+    student1.introduce();\par
+    teacher1.introduce();\par
+\par
+    student1.study();\par
+    teacher1.teach();\par
+\par
+    return 0;\par
+\}\par
+\par
+\par
+6.3.2 Objective: Learn the concept of inheritance.\par
+Ans.\par
+there is a main two class : 1st is parent class and 2nd is child class parent class also know is base class and child class is also know is derive class.\par
+\par
+inheritance in different type of method like reusability, method overloading and access specifires.\par
+three type of access specifire :\par
+1. public \par
+2. private\par
+3. protected \par
+\par
+five types of inheritance :\par
+1. single inheritance.\par
+2. multiple inheritance.\par
+3. multi-level inheritance.\par
+4. hierarchical inheritance.\par
+5. hybrid inheritance.\par
+\par
+\par
+\fs44 THEORY EXERCISE:\par
+\fs28 1. Explain the key concepts of Object-Oriented Programming (OOP).\par
+Ans.\par
+Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to organize and structure code. In C++, OOP is used to make code more modular, flexible, and easier to maintain. The four main pillars of OOP are Encapsulation, Abstraction, Inheritance, and Polymorphism.\par
+\par
+1. Encapsulation:\par
+Encapsulation is the concept of bundling data (attributes) and methods (functions) that operate on the data into a single unit called a class. It also restricts direct access to some of the object's components, which is usually done by making data private and providing public methods to access or modify that data. This helps protect the integrity of the data by controlling how it is accessed and modified.\par
+\par
+2. Abstraction:\par
+Abstraction is the concept of hiding complex implementation details and showing only the essential features of an object. It simplifies the interface and helps in focusing on high-level operations without worrying about low-level implementation.\par
+1. Abstract Classes: Classes that cannot be instantiated directly and must be inherited. They often contain pure virtual functions (abstract methods) that must be implemented by derived classes.\par
+2. Virtual Functions: These allow a function to be overridden in derived classes.\par
+\par
+3. Inheritance:\par
+Inheritance is the concept that allows a class (called derived class) to inherit properties and behaviors (methods) from another class (called base class). This enables code reusability and establishes a relationship between classes.\par
+1. Base Class: The class that provides common functionality.\par
+2. Derived Class: The class that inherits functionality from the base class and can add or override its own behavior.\par
+\par
+4. Polymorphism:\par
+Polymorphism is the ability of an object to take on many forms. It allows the same function or method to behave differently based on the object that is calling it. There are two types of polymorphism in C++:\par
+1. Compile-time Polymorphism (Static Binding): Achieved by function overloading and operator overloading.\par
+2. Run-time Polymorphism (Dynamic Binding): Achieved by using virtual functions and function overriding.\par
+\par
+\par
+2. What are classes and objects in C++? Provide an example.\par
+Ans.\par
+there is fundamental concept in object oriented programing\par
+1. Class:\par
+A class is a blueprint or template for creating objects. It defines a data structure that contains both data (attributes) and functions (methods) that operate on the data. A class defines the properties and behaviors of the objects that are created from it.\par
+2. Object:\par
+An object is an instance of a class. It is a specific entity that holds the actual values for the attributes and can perform the behaviors (methods) defined by the class.\par
+\par
+A class is like a blueprint.\par
+An object is a concrete instance created based on that blueprint.\par
+\par
+example:\par
+#include <iostream>\par
+using namespace std;\par
+\par
+class Car \{\par
+public:\par
+    string brand;\par
+    string model;\par
+    int year;\par
+\par
+    void displayInfo() \{\par
+        cout << "Car Brand: " << brand << endl;\par
+        cout << "Car Model: " << model << endl;\par
+        cout << "Year of Manufacture: " << year << endl;\par
+    \}\par
+\};\par
+\par
+int main() \{\par
+    Car car1;\par
+    Car car2;\par
+\par
+    car1.brand = "Toyota";\par
+    car1.model = "Corolla";\par
+    car1.year = 2020;\par
+\par
+    car2.brand = "Honda";\par
+    car2.model = "Civic";\par
+    car2.year = 2021;\par
+\par
+    cout << "Car 1 Information:" << endl;\par
+    car1.displayInfo();\par
+    \par
+    cout << "\\nCar 2 Information:" << endl;\par
+    car2.displayInfo();\par
+\par
+    return 0;\par
+\}\par
+\par
+3. What is inheritance in C++? Explain with an example.\par
+Ans.\par
+Inheritance is one of the core concepts of Object-Oriented Programming (OOP). In C++, inheritance allows a class (called derived class) to inherit attributes and methods from another class (called base class). This provides a way to reuse code and establish relationships between classes, making the code more modular, extensible, and maintainable.\par
+\par
+Types of Inheritance:\par
+Single Inheritance: A class derives from a single base class.\par
+Multiple Inheritance: A class derives from more than one base class.\par
+Multilevel Inheritance: A class derives from another derived class.\par
+Hierarchical Inheritance: Multiple classes derive from a single base class.\par
+Hybrid Inheritance: A combination of multiple inheritance and multilevel inheritance.\par
+\par
+example: \par
+#include <iostream>\par
+using namespace std;\par
+\par
+class Vehicle \{\par
+public:\par
+    string brand;\par
+    int year;\par
+\par
+    Vehicle(string b, int y) : brand(b), year(y) \{\}\par
+\par
+    void displayInfo() \{\par
+        cout << "Brand: " << brand << ", Year: " << year << endl;\par
+    \}\par
+\};\par
+\par
+class Car : public Vehicle \{\par
+public:\par
+    string model;\par
+\par
+    Car(string b, int y, string m) : Vehicle(b, y), model(m) \{\}\par
+\par
+    void displayCarInfo() \{\par
+        displayInfo();\par
+        cout << "Model: " << model << endl;\par
+    \}\par
+\};\par
+\par
+int main() \{\par
+    Car car1("Toyota", 2020, "Corolla");\par
+\par
+    car1.displayCarInfo();\par
+\par
+    return 0;\par
+\}\par
+\par
+4. What is encapsulation in C++? How is it achieved in classes?\par
+Ans.\par
+Encapsulation is one of the fundamental principles of Object-Oriented Programming (OOP). It refers to the concept of bundling or wrapping the data (attributes) and the methods (functions) that operate on the data into a single unit called a class. Encapsulation also refers to restricting access to some of the object's components (typically data members) to ensure that the object is used in a controlled way.\par
+\par
+Encapsulation have 1. data hinding, 2. control over data, 3. modularity, 4. maintainability.\par
+access specifires:\par
+1. private access specifires.\par
+2. public access specifires.\par
+3. protected access specifires.\par
+\par
+example:\par
+#include <iostream>\par
+using namespace std;\par
+\par
+class Person \{\par
+private:\par
+    string name;\par
+    int age;\par
+\par
+public:\par
+    void setName(string n) \{\par
+        name = n;\par
+    \}\par
+\par
+    string getName() \{\par
+        return name;\par
+    \}\par
+\par
+    void setAge(int a) \{\par
+        if (a > 0) \{\par
+            age = a;\par
+        \} else \{\par
+            cout << "Age must be positive!" << endl;\par
+        \}\par
+    \}\par
+\par
+    int getAge() \{\par
+        return age;\par
+    \}\par
+\};\par
+\par
+int main() \{\par
+    Person person1;\par
+\par
+    person1.setName("Kamlesh");\par
+    person1.setAge(24);\par
+\par
+    cout << "Name: " << person1.getName() << endl;\par
+    cout << "Age: " << person1.getAge() << endl;\par
+\par
+    return 0;\par
+\}\par
+\par
+\par
+\fs44\par
+\fs28\par
+\par
+\par
+\par
+\par
+}
+ 
